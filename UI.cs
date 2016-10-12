@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace Lab3
 {
+    // DIT IS GROTE TEST MAN
 	public class UI : Form
 	{
 		ComboBox fromBox;
