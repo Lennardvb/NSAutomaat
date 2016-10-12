@@ -12,16 +12,19 @@ namespace Lab3
         public static int BerekenReisTarief(String Start, String Eind)
         {
             int Tarief = 0;
+            // De reis wordt opgesteld. Deze waarde wordt daarna opgezocht in de tarief dictionary.
             string Reis = Start + "-" + Eind;
-            if (OverzichtTarief.Tarief.ContainsKey(Reis))
+            if (OverzichtTarief.TariefDictionary.ContainsKey(Reis))
             {
-               Tarief = OverzichtTarief.Tarief[Reis];
+               Tarief = OverzichtTarief.TariefDictionary[Reis];
             }
+            // Als de reis zich niet in de tarief dictionary bevindt, wordt de reis omgedraaid om te kijken
+            // of hij er andersom wel in zit.
             else
             {
                 Reis = Eind + "-" + Start;
 
-                Tarief = OverzichtTarief.Tarief[Reis];
+                Tarief = OverzichtTarief.TariefDictionary[Reis];
 
             }
             MessageBox.Show(Convert.ToString(Tarief));

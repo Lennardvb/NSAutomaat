@@ -8,7 +8,7 @@ namespace Lab3
     public static class OverzichtTarief
     {
 
-       public static Dictionary<string, int> Tarief = new Dictionary<string, int>()
+       public static Dictionary<string, int> TariefDictionary = new Dictionary<string, int>()
         {
             // Hieronder worden al de reizen gespecificeerd vanuit elk station.
             // Er komen geen dubbele reizen voor. Bv dus niet Utrect Centraal - Gouda en Gouda - Utrecht Centraal
