@@ -38,7 +38,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BerekenTarief.cs" />
+    <Compile Include="KiesBetaalmethode.cs" />
+    <Compile Include="KiesKlasse.cs" />
+    <Compile Include="KiesRailcard.cs" />
+    <Compile Include="KiesReisType.cs" />
     <Compile Include="OverzichtTarief.cs" />
+    <Compile Include="PrijsBerekenaar.cs" />
     <Compile Include="Station.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
