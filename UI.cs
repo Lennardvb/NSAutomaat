@@ -16,7 +16,7 @@ namespace Lab3
 		RadioButton twentyDiscount;
 		RadioButton fortyDiscount;
 		ComboBox payment;
-		Button pay;
+        Button pay;
 
 		public UI ()
 		{

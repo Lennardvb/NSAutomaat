@@ -12,7 +12,8 @@ namespace Lab3
 				"Geldermalsen",
 				"Hilversum",
 				"Duivendrecht",
-				"Weesp"
+				"Weesp",
+                "TestStation"
 			};
 		}
 
