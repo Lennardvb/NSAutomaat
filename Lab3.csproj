@@ -38,7 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BerekenTarief.cs" />
-    <Compile Include="OverzichtReis.cs" />
+    <Compile Include="OverzichtTarief.cs" />
     <Compile Include="Station.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

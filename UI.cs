@@ -30,7 +30,7 @@ namespace Lab3
 			// *************************************
 
 			// Get number of tariefeenheden
-			int tariefeenheden = Tariefeenheden.getTariefeenheden (info.From, info.To);
+			int tariefeenheden = BerekenTarief.BerekenReisTarief (info.From, info.To);
 
 			// Compute the column in the table based on choices
 			int tableColumn;
