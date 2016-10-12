@@ -4,7 +4,6 @@ using System.Windows.Forms;
 
 namespace Lab3
 {
-    // DIT IS GROTE TEST MAN
 	public class UI : Form
 	{
 		ComboBox fromBox;
@@ -119,7 +118,7 @@ namespace Lab3
 			fromLabel.Dock = DockStyle.Fill;
 			fromBox = new ComboBox ();
 			fromBox.DropDownStyle = ComboBoxStyle.DropDownList;
-			fromBox.Items.AddRange (Tariefeenheden.getStations ());
+			fromBox.Items.AddRange (Station.StationNaam);
 			fromBox.SelectedIndex = 0;
 			grid.Controls.Add (fromBox, 1, 0);
 			grid.SetColumnSpan (fromBox, 2);
@@ -131,7 +130,7 @@ namespace Lab3
 			toLabel.Dock = DockStyle.Fill;
 			toBox = new ComboBox ();
 			toBox.DropDownStyle = ComboBoxStyle.DropDownList;
-			toBox.Items.AddRange (Tariefeenheden.getStations ());
+			toBox.Items.AddRange (Station.StationNaam);
 			toBox.SelectedIndex = 0;
 			grid.Controls.Add (toBox, 4, 0);
 			grid.SetColumnSpan (toBox, 2);

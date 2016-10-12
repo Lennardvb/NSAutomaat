@@ -4,18 +4,6 @@ namespace Lab3
 {
 	public static class Tariefeenheden
 	{
-		public static String[] getStations()
-		{
-			return new String[] {
-				"Utrecht Centraal",
-				"Gouda",
-				"Geldermalsen",
-				"Hilversum",
-				"Duivendrecht",
-				"Weesp",
-                "TestStation"
-			};
-		}
 
 		public static int getTariefeenheden(String from, String to) 
 		{
