@@ -45,7 +45,6 @@
     <Compile Include="UI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tariefeenheden.cs" />
     <Compile Include="UIInfo.cs" />
     <Compile Include="PricingTable.cs" />
     <Compile Include="Card.cs" />

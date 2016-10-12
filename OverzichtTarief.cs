@@ -21,6 +21,13 @@ namespace Lab3
             { "Utrecht Centraal-Weesp", 57 },
             { "Utrecht Centraal-Utrecht Centraal", 0 },
             
+            // Alle reizen vanaf Gouda
+            { "Gouda-Geldermalsen", 58 },
+            { "Gouda-Hilversum", 50 },
+            { "Gouda-Duivendrecht", 54 },
+            { "Gouda-Weesp", 57 },
+            { "Gouda-Gouda", 0 },
+
             // Alle reizen vanaf Geldermalsen
             { "Geldermalsen-Hilversum", 44 },
             { "Geldermalsen-Duivendrecht", 57 },
@@ -37,38 +44,6 @@ namespace Lab3
             // Alle reizen vanuit Weesp
             { "Weesp-Weesp", 0 },
         };
-
-        /*
-        public class Reis
-        {
-            public string Startplaats;
-            public string Eindbestemming;
-
-            public Reis(string start, string eind)
-            {
-                Startplaats = start;
-                Eindbestemming = eind;
-            }
-        }
-
-        public class ReisEqualityComparer : IEqualityComparer<Reis>
-        {
-            #region IEqualityComparer<Reis> Members
-
-            public bool Equals(Reis x, Reis y)
-            {
-                return ((x.Startplaats == y.Startplaats) & (x.Eindbestemming == y.Eindbestemming));
-            }
-
-            public int GetHashCode(Reis obj)
-            {
-                string combined = obj.Startplaats + "|" + obj.Eindbestemming.ToString();
-                return (combined.GetHashCode());
-            }
-
-            #endregion
-        }
-        */
 
     }
 }
