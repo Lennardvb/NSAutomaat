@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Lab3
 {
     class PrijsBerekenaar
     {
+
         // Twijfel over de datatypes van de Parameters
-        public static Decimal BerekenPrijs(int tariefeenheden, decimal KlassePrijsToevoeging, double KortingsPercentage,
-            double BetalingsMethodeToevoeging, string Reistype)
+        public static Decimal BerekenPrijs(UIInfo info)
         {
-            double price = 0;
-           decimal StandaardTicketPrijs = 2.10m; // Volgens mij is deze ook niet nodig.
+            decimal price = 0;
 
-            price = tariefeenheden * 0.02 * ((StandaardTicketPrijs + KlassePrijsToevoeging));
-            price = price * KortingsPercentage + BetalingsMethodeToevoeging;
+            price = info.Klasse.GetKlassePrijs() * 0.02m * Tariefeenheden.getTariefeenheden(info.StartPlaats, info.EindBestemming);
+            price = price;
 
-            return (decimal)Math.Round(price, 2);
+            MessageBox.Show(Convert.ToString(price));
+            return Math.Round(price, 2);
+
         }
     }
 }
+

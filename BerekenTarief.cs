@@ -8,15 +8,15 @@ namespace Lab3
 {
     class BerekenTarief
     {
-       
+        // !! Dit is een alternatief voor het berekenen van het tarief !!// !! Dit is een alternatief voor het berekenen van het tarief !!
         public static int BerekenReisTarief(String Start, String Eind)
         {
             int Tarief = 0;
             // De reis wordt opgesteld. Deze waarde wordt daarna opgezocht in de tarief dictionary.
             string Reis = Start + "-" + Eind;
-            if (OverzichtTarief.TariefDictionary.ContainsKey(Reis))
+            if (AlternatiefOverzichtTarief.TariefDictionary.ContainsKey(Reis))
             {
-               Tarief = OverzichtTarief.TariefDictionary[Reis];
+               Tarief = AlternatiefOverzichtTarief.TariefDictionary[Reis];
             }
             // Als de reis zich niet in de tarief dictionary bevindt, wordt de reis omgedraaid om te kijken
             // of hij er andersom wel in zit.
@@ -24,10 +24,9 @@ namespace Lab3
             {
                 Reis = Eind + "-" + Start;
 
-                Tarief = OverzichtTarief.TariefDictionary[Reis];
+                Tarief = AlternatiefOverzichtTarief.TariefDictionary[Reis];
 
             }
-            MessageBox.Show(Convert.ToString(Tarief));
             return Tarief;
         }
        

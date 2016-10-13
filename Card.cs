@@ -13,7 +13,7 @@ namespace Lab3
 	}
 
 	// Mock CreditCard implementation
-	public class CreditCard : ICard
+	public class CreditCardImplementatie : ICard
 	{
 		public void Connect ()
 		{
@@ -50,7 +50,7 @@ namespace Lab3
 	}
 
 	// Mock CreditCard implementation
-	public class DebitCard : ICard
+	public class DebitCardImplementatie : ICard
 	{
 		public void Connect ()
 		{

@@ -3,3 +3,8 @@ C:\Users\Gebruiker\Source\Repos\NSAutomaat\bin\Debug\Lab3.pdb
 C:\Users\Gebruiker\Source\Repos\NSAutomaat\obj\x86\Debug\Lab3.csprojResolveAssemblyReference.cache
 C:\Users\Gebruiker\Source\Repos\NSAutomaat\obj\x86\Debug\Lab3.exe
 C:\Users\Gebruiker\Source\Repos\NSAutomaat\obj\x86\Debug\Lab3.pdb
+C:\Users\Rick\Source\Repos\NSAutomaat2\obj\x86\Debug\Lab3.exe
+C:\Users\Rick\Source\Repos\NSAutomaat2\obj\x86\Debug\Lab3.pdb
+C:\Users\Rick\Source\Repos\NSAutomaat2\obj\x86\Debug\Lab3.csprojResolveAssemblyReference.cache
+C:\Users\Rick\Source\Repos\NSAutomaat2\bin\Debug\Lab3.exe
+C:\Users\Rick\Source\Repos\NSAutomaat2\bin\Debug\Lab3.pdb

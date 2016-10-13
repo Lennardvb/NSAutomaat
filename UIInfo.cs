@@ -2,83 +2,58 @@
 
 namespace Lab3
 {
-	public enum UIClass
-	{
-		FirstClass,
-		SecondClass
-	}
 
-	public enum UIWay
+	public class UIInfo
 	{
-		OneWay,
-		Return
-	}
+		string Start, Eind;
+		KiesKlasse SoortKlasse;
+        KiesReisType SoortReisType;
+        KiesRailcard RailcardType;
+        KiesBetaalmethode BetaalmethodeType;
 
-	public enum UIDiscount
-	{
-		NoDiscount,
-		TwentyDiscount,
-		FortyDiscount
-	}
-
-	public enum UIPayment
-	{
-		DebitCard,
-		CreditCard,
-		Cash
-	}
-
-	public struct UIInfo
-	{
-		string from, to;
-		UIClass cls;
-		UIWay way;
-		UIDiscount discount;
-		UIPayment payment;
-
-		public UIInfo (string from, string to, UIClass cls, UIWay way, UIDiscount discount, UIPayment payment)
+		public UIInfo (string StartPlaats, string EindBestemming, KiesKlasse Klasse, KiesReisType SoortReis, KiesRailcard Railcard, KiesBetaalmethode Betaalmethode)
 		{
-			this.from = from;
-			this.to = to;
-			this.cls = cls;
-			this.way = way;
-			this.discount = discount;
-			this.payment = payment;
+			this.Start = StartPlaats;
+			this.Eind = EindBestemming;
+            this.SoortKlasse = Klasse;
+			this.SoortReisType = SoortReis;
+			this.RailcardType = Railcard;
+            this.BetaalmethodeType = Betaalmethode;
 		}
 
-		public string From {
+		public string StartPlaats {
 			get {
-				return from;
+				return Start;
 			}
 		}
 
-		public string To {
+		public string EindBestemming {
 			get {
-				return to;
+				return Eind;
 			}
 		}
 
-		public UIClass Class {
+		public KiesKlasse Klasse {
 			get {
-				return cls;
+                return SoortKlasse;
 			}
 		}
 
-		public UIWay Way {
+		public KiesReisType ReisType {
 			get {
-				return way;
+				return SoortReisType ;
 			}
 		}
 
-		public UIDiscount Discount {
+		public KiesRailcard Railcard {
 			get {
-				return discount;
+				return RailcardType;
 			}
 		}
 
-		public UIPayment Payment {
+		public KiesBetaalmethode Betaalmethode {
 			get {
-				return payment;
+				return BetaalmethodeType;
 			}
 		}
 	}

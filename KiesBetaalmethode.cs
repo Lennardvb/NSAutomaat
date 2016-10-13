@@ -5,33 +5,72 @@ using System.Text;
 
 namespace Lab3
 {
-    public interface KiesBetaalmethode
+    public abstract class KiesBetaalmethode
     {
-        string KiesBetaalmethode();
-        decimal ExtraKostenBetaalmethode();
+        protected abstract string Betaalmethode();
+        public virtual string BetaalmethodeNaam()
+        {
+            return Betaalmethode();
+        }
+
+        protected abstract decimal ExtraKostenBetaalmethode();
+        public virtual decimal GetExtraKostenBetaalmethode()
+        {
+            return ExtraKostenBetaalmethode();
+        }
+
+        public static string[] KrijgBetaalmethodeSoorten()
+        {
+            IEnumerable<KiesBetaalmethode> BetaalmethodeList = typeof(KiesBetaalmethode)
+             .Assembly.GetTypes()
+             .Where(t => t.IsSubclassOf(typeof(KiesBetaalmethode)) && !t.IsAbstract)
+             .Select(t => (KiesBetaalmethode)Activator.CreateInstance(t)).ToArray();
+            List<string> BetaalmethodeNamen = new List<string>();
+            foreach (KiesBetaalmethode pay in BetaalmethodeList)
+            {
+                BetaalmethodeNamen.Add(pay.Betaalmethode());
+            }
+
+            return BetaalmethodeNamen.ToArray();
+        }
+
+        public static KiesBetaalmethode KrijgBetaalmethode(string name)
+        {
+            // Find the array index of the requested Pay method
+            int index = Array.FindIndex(KrijgBetaalmethodeSoorten(), w => w.Contains(name));
+            // Create a list of the class names of the inherited Station classes
+            IEnumerable<KiesBetaalmethode> BetaalmethodeList = typeof(KiesBetaalmethode)
+       .Assembly.GetTypes()
+       .Where(t => t.IsSubclassOf(typeof(KiesBetaalmethode)) && !t.IsAbstract)
+       .Select(t => (KiesBetaalmethode)Activator.CreateInstance(t));
+            // Use the index in the class name list to return the requested Station
+            return BetaalmethodeList.ToArray()[index];
+        }
+
     }
 
     public class Debitcard : KiesBetaalmethode
     {
-        public string KiesBetaalmethode()
+        protected override string Betaalmethode()
         {
-            return "Debitcard";
+            return "Debit card";
         }
 
-        public decimal ExtraKostenBetaalmethode()
+        protected override decimal ExtraKostenBetaalmethode()
         {
             return 0;
         }
+
     }
 
     public class Creditcard : KiesBetaalmethode
     {
-        public string KiesBetaalmethode()
+        protected override string Betaalmethode()
         {
-            return "Creditcard";
+            return "Credit card";
         }
 
-        public decimal ExtraKostenBetaalmethode()
+        protected override decimal ExtraKostenBetaalmethode()
         {
             return 0.50m;
         }
@@ -39,12 +78,12 @@ namespace Lab3
 
     public class Contant : KiesBetaalmethode
     {
-        public string KiesBetaalmethode()
+        protected override string Betaalmethode()
         {
             return "Contant";
         }
 
-        public decimal ExtraKostenBetaalmethode()
+        protected override decimal ExtraKostenBetaalmethode()
         {
             return 0;
         }
