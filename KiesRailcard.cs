@@ -58,7 +58,7 @@ namespace Lab3
 
         protected override decimal RailcardKortingsPercentage()
         {
-            return 0;
+            return 1m;
         }
     }
 

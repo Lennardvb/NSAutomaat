@@ -155,7 +155,7 @@ namespace Lab3
 			grid.Controls.Add (pay, 0, 3);
 			grid.SetColumnSpan (pay, 6);
 			// Set up event
-			pay.Click += (object sender, EventArgs e) => PrijsBerekenaar.BerekenPrijs(getUIInfo());
+			pay.Click += (object sender, EventArgs e) => VervoerbewijsVerkoop.CreëerBetaling(getUIInfo());
 		}
 
 		private UIInfo getUIInfo()

@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BerekenTarief.cs" />
+    <Compile Include="CoinMachineAdapter.cs" />
     <Compile Include="KiesBetaalmethode.cs" />
     <Compile Include="KiesKlasse.cs" />
     <Compile Include="KiesRailcard.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="PricingTable.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CoinMachine.cs" />
+    <Compile Include="VervoerbewijsVerkoop.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Lab3
 {
@@ -47,6 +48,33 @@ namespace Lab3
             return BetaalmethodeList.ToArray()[index];
         }
 
+        public virtual void Connect()
+        {
+        }
+
+        public virtual void Disconnect()
+        {
+        }
+
+        public virtual int BeginTransaction(float amount)
+        {
+            MessageBox.Show("Er is iets misgegaan met de transactie");
+            return 1;
+        }
+
+        public virtual bool EndTransaction(int id)
+        {
+            if (id != 1)
+                return false;
+
+            MessageBox.Show("End transaction");
+            return true;
+        }
+
+        public virtual void CancelTransaction(int id)
+        {
+        }
+
     }
 
     public class Debitcard : KiesBetaalmethode
@@ -61,6 +89,39 @@ namespace Lab3
             return 0;
         }
 
+        public override void Connect()
+        {
+            MessageBox.Show("Connecting to debit card reader");
+        }
+
+        public override void Disconnect()
+        {
+            MessageBox.Show("Disconnecting from debit card reader");
+        }
+
+        public override int BeginTransaction(float amount)
+        {
+            MessageBox.Show("Begin transaction 1 of " + amount + " EUR");
+            return 1;
+        }
+
+        public override bool EndTransaction(int id)
+        {
+            if (id != 1)
+                return false;
+
+            MessageBox.Show("End transaction 1");
+            return true;
+        }
+
+        public override void CancelTransaction(int id)
+        {
+            if (id != 1)
+                throw new Exception("Incorrect transaction id");
+
+            MessageBox.Show("Cancel transaction 1");
+        }
+
     }
 
     public class Creditcard : KiesBetaalmethode
@@ -73,6 +134,39 @@ namespace Lab3
         protected override decimal ExtraKostenBetaalmethode()
         {
             return 0.50m;
+        }
+
+        public override void Connect()
+        {
+            MessageBox.Show("Connecting to credit card reader");
+        }
+
+        public override void Disconnect()
+        {
+            MessageBox.Show("Disconnecting from credit card reader");
+        }
+
+        public override int BeginTransaction(float amount)
+        {
+            MessageBox.Show("Begin transaction 1 of " + amount + " EUR");
+            return 1;
+        }
+
+        public override bool EndTransaction(int id)
+        {
+            if (id != 1)
+                return false;
+
+            MessageBox.Show("End transaction 1");
+            return true;
+        }
+
+        public override void CancelTransaction(int id)
+        {
+            if (id != 1)
+                throw new Exception("Incorrect transaction id");
+
+            MessageBox.Show("Cancel transaction 1");
         }
     }
 
